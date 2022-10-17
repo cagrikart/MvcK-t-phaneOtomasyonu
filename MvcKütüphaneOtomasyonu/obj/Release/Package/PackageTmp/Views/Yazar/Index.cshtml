@@ -1,0 +1,40 @@
+﻿@using MvcKütüphaneOtomasyonu.Models.Entity;
+@model List<TBLYAZAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Yazarlar </h2>
+
+
+<table class="table table-striped">
+    <tr style="background-color:rgb(252,178,22)">
+        <th>Yazarlar Id</th>
+        <th>Yazarlar Ad</th>
+        <th>Yazarlar SOYAD</th>
+        <th>Sİl</th>
+        <th>GÜNCELLE</th>
+        <th>YZAZARIN KİTAPLARI</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.AD</td>
+            <td>@item.SOYAD</td>
+            <td> 
+                <a href="/Yazar/YazarSil/@item.ID" class="btn btn-danger">SİL</a>
+            </td>
+            <td>
+                <a href="/Yazar/YazarGetir/@item.ID" class="btn btn-warning">GÜNCELLE</a>
+            </td>
+            <td>
+                <a href="/Yazar/YazarKitaplar/@item.ID" style="background-color:lightcoral;" class="btn btn-default">YAZARIN KİTAPLARI</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Yazar/YazarEkle/" class="btn btn-success">YENİ YAZAR EKLE</a>
+

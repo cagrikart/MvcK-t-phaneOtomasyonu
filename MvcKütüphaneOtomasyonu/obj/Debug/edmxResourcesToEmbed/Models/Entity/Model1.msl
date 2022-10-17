@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBLİBRARYModelStoreContainer" CdmEntityContainer="DBLİBRARYEntities">
+    <EntitySetMapping Name="HAKKİMİZDA">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.HAKKİMİZDA">
+        <MappingFragment StoreEntitySet="HAKKİMİZDA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ACİKLAMA" ColumnName="ACİKLAMA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLADMİN">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLADMİN">
+        <MappingFragment StoreEntitySet="TBLADMİN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Yetki" ColumnName="Yetki" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLCATEGORY">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLCATEGORY">
+        <MappingFragment StoreEntitySet="TBLCATEGORY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLCEZALAR">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLCEZALAR">
+        <MappingFragment StoreEntitySet="TBLCEZALAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UYE" ColumnName="UYE" />
+          <ScalarProperty Name="BASLANGİCTARİHİ" ColumnName="BASLANGİCTARİHİ" />
+          <ScalarProperty Name="BİTİSTARİHİ" ColumnName="BİTİSTARİHİ" />
+          <ScalarProperty Name="PARA" ColumnName="PARA" />
+          <ScalarProperty Name="HAREKET" ColumnName="HAREKET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLDUYURULAR">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLDUYURULAR">
+        <MappingFragment StoreEntitySet="TBLDUYURULAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KATEGORİ" ColumnName="KATEGORİ" />
+          <ScalarProperty Name="İCERİK" ColumnName="İCERİK" />
+          <ScalarProperty Name="TARİH" ColumnName="TARİH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLHAREKET">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLHAREKET">
+        <MappingFragment StoreEntitySet="TBLHAREKET">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KITAP" ColumnName="KITAP" />
+          <ScalarProperty Name="UYE" ColumnName="UYE" />
+          <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
+          <ScalarProperty Name="ALİSTARİHİ" ColumnName="ALİSTARİHİ" />
+          <ScalarProperty Name="İADETARİHİ" ColumnName="İADETARİHİ" />
+          <ScalarProperty Name="UYEGETİRTARİH" ColumnName="UYEGETİRTARİH" />
+          <ScalarProperty Name="İSLEMDURUM" ColumnName="İSLEMDURUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLİLETİSİM">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLİLETİSİM">
+        <MappingFragment StoreEntitySet="TBLİLETİSİM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="MAİL" ColumnName="MAİL" />
+          <ScalarProperty Name="KONU" ColumnName="KONU" />
+          <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLKASA">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLKASA">
+        <MappingFragment StoreEntitySet="TBLKASA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AY" ColumnName="AY" />
+          <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLKİTAP">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLKİTAP">
+        <MappingFragment StoreEntitySet="TBLKİTAP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="KATEGORİ" ColumnName="KATEGORİ" />
+          <ScalarProperty Name="YAZAR" ColumnName="YAZAR" />
+          <ScalarProperty Name="BASİMYİL" ColumnName="BASİMYİL" />
+          <ScalarProperty Name="YAYİNEVİ" ColumnName="YAYİNEVİ" />
+          <ScalarProperty Name="SAYFA" ColumnName="SAYFA" />
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+          <ScalarProperty Name="KİTAPRESİM" ColumnName="KİTAPRESİM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLMESAJLAR">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLMESAJLAR">
+        <MappingFragment StoreEntitySet="TBLMESAJLAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GONDEREN" ColumnName="GONDEREN" />
+          <ScalarProperty Name="ALICI" ColumnName="ALICI" />
+          <ScalarProperty Name="KONU" ColumnName="KONU" />
+          <ScalarProperty Name="İCERİK" ColumnName="İCERİK" />
+          <ScalarProperty Name="TARİH" ColumnName="TARİH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLPERSONEL">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLPERSONEL">
+        <MappingFragment StoreEntitySet="TBLPERSONEL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLUYELER">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLUYELER">
+        <MappingFragment StoreEntitySet="TBLUYELER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="MAİL" ColumnName="MAİL" />
+          <ScalarProperty Name="KULLANİCİADİ" ColumnName="KULLANİCİADİ" />
+          <ScalarProperty Name="ŞİFRE" ColumnName="ŞİFRE" />
+          <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
+          <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLYAZAR">
+      <EntityTypeMapping TypeName="DBLİBRARYModel.TBLYAZAR">
+        <MappingFragment StoreEntitySet="TBLYAZAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="DETAY" ColumnName="DETAY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="EnFazlaKitapYazar" FunctionName="DBLİBRARYModel.Store.EnFazlaKitapYazar" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DBLİBRARYModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DBLİBRARYModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DBLİBRARYModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DBLİBRARYModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBLİBRARYModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DBLİBRARYModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBLİBRARYModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DBLİBRARYModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DBLİBRARYModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

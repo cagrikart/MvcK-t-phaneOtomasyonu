@@ -1,0 +1,27 @@
+﻿@model MvcKütüphaneOtomasyonu.Models.Entity.TBLDUYURULAR
+@{
+    ViewBag.Title = "YeniDuyuru";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>YeniDuyuru</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label> KATEGORİ ADI</label>
+        @Html.TextBoxFor(k => k.KATEGORİ, new { @class = "form-control" });
+    </div>
+    <div>
+        <label> İÇERİK </label>
+        @Html.TextBoxFor(k => k.İCERİK, new { @class = "form-control" });
+    </div>
+    <div>
+        <label> Tarih</label>
+        @Html.TextBoxFor(k => k.TARİH, new { @class = "form-control" });
+    </div>
+
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1"> DUYURU EKLE  </button>
+    </div>
+</form>
