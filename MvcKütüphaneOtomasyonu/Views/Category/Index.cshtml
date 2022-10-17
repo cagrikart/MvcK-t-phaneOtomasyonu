@@ -1,0 +1,32 @@
+﻿@using MvcKütüphaneOtomasyonu.Models.Entity;
+@model List<TBLCATEGORY>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori Id</th>
+        <th>Kategori Ad</th>
+        <th>Sİl</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.AD</td>
+            <td>
+                <a href="/Category/KategoriSil/@item.ID" class="btn btn-danger">SİL</a>
+            </td>
+            <td>
+                <a href="/Category/KategoriGetir/@item.ID" class="btn btn-success">GÜNCELLE</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Category/KategoriEkle" class="btn btn-success">YENİ KATEGORİ EKLE</a>
+

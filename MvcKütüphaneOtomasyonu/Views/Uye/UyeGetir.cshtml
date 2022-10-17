@@ -1,0 +1,53 @@
+﻿@model MvcKütüphaneOtomasyonu.Models.Entity.TBLUYELER
+
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>UyeGetir</h2>
+
+
+@using (Html.BeginForm("UyeGuncelle", "Uye", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(u => u.ID)
+        @Html.TextBoxFor(u => u.ID, new { @class = "form-control" })
+        <br />
+        <label>kitap adı </label>
+        @Html.TextBoxFor(u => u.AD, new { @class = "form-control" })
+        <br />
+        
+        <label>SOYAD </label>
+        @Html.TextBoxFor(u => u.SOYAD, new { @class = "form-control" })
+
+        <br />
+        <label> MAİL </label>
+        @Html.TextBoxFor(u => u.MAİL, new { @class = "form-control" })
+
+
+        <br />
+        <label> KULLANİCİADİ</label>
+        @Html.TextBoxFor(u => u.KULLANİCİADİ, new { @class = "form-control" })
+
+
+        <label>ŞİFRE  </label>
+        @Html.TextBoxFor(u => u.ŞİFRE, new { @class = "form-control" })
+
+        <br />
+        <label> FOTOGRAF  </label>
+        @Html.TextBoxFor(u => u.FOTOGRAF, new { @class = "form-control" })
+
+
+        <br />
+        <label>TELEFON </label>
+        @Html.TextBoxFor(u => u.TELEFON, new { @class = "form-control" })
+
+      
+
+        <div>
+            <button class="btn btn-warning"> Kitap bilgilerini GÜNCELLE </button>
+        </div>
+    </div>
+
+}

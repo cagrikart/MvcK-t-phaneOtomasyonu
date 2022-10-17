@@ -1,0 +1,35 @@
+﻿@using MvcKütüphaneOtomasyonu.Models.Entity
+@model List<TBLPERSONEL>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<h2>Personel Listesi </h2>
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Personel Adı</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.PERSONEL</td>
+
+            <td>
+                <a href="/Personel/PersonelSil/@item.ID" class="btn btn-danger">SİL</a>
+            </td>
+            <td>
+                <a href="/Personel/PersonelGetir/@item.ID" class="btn btn-success">GÜNCELLE</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Personel/PersonelEkle" class="btn btn-success">YENİ Personel EKLE</a>

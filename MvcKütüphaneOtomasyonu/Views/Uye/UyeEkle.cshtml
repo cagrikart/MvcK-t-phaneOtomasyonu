@@ -1,0 +1,52 @@
+﻿@model MvcKütüphaneOtomasyonu.Models.Entity.TBLUYELER
+
+@{
+    ViewBag.Title = "UyeEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>UyeEkle</h2>
+
+
+<form class="form-group" method="post">
+    <div>
+        <label> Üye ADI</label>
+        @Html.TextBoxFor(u => u.AD, new { @class = "form-control" })
+    </div>
+    
+    <div>
+        <label> Kitap SOYAD </label>
+        <br />
+        @Html.TextBoxFor(u => u.SOYAD, new { @class = "form-control" })
+
+    </div>
+    <div>
+        <label> Kitap MAİL </label>
+        @Html.TextBoxFor(u => u.MAİL, new { @class = "form-control" })
+    </div>
+    <div>
+        <label> Kitap KULLANİCİADİ </label>
+        @Html.TextBoxFor(u => u.KULLANİCİADİ, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label> Kitap ŞİFRE </label>
+        @Html.TextBoxFor(u => u.ŞİFRE, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label> Kitap FOTOGRAF </label>
+        @Html.TextBoxFor(u => u.FOTOGRAF, new { @class = "form-control" })
+    </div>
+    <div>
+        <label> Kitap TELEFON </label>
+        @Html.TextBoxFor(u => u.TELEFON, new { @class = "form-control" })
+    </div>
+  
+
+
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1"> Kitap EKLE  </button>
+    </div>
+</form>

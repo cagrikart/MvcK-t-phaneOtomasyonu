@@ -1,0 +1,46 @@
+﻿@using MvcKütüphaneOtomasyonu.Models.Entity;
+@model List<TBLDUYURULAR>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2> Duyurular </h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Duyuru Kategori</th>
+        <th> Duyuru İçerik </th>
+        <th> Duyuru Tarih</th>
+
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+        <th>DETAYLAR </th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.KATEGORİ</td>
+            <td>@item.İCERİK</td>
+            <td>@Convert.ToDateTime(item.TARİH).ToString("dd/MM/yyyy")</td>
+
+            <td>
+                <a href="/Duyurular/DuyuruSil/@item.ID" class="btn btn-danger">SİL</a>
+            </td>
+            <td>
+                <a href="/Duyurular/DuyuruGetir/@item.ID" class="btn btn-success">GÜNCELLE</a>
+            </td>
+            <td>
+                <a href="/Odunc/Odunciade/@item.ID" class="btn btn-default " style="background-color:#64d8ca;color:" white">DETAYLAR </a>
+            </td>
+
+        </tr>
+    }
+</table>
+
+<a href="/Duyurular/YeniDuyuru" class="btn btn-success">YENİ DUYURU EKLE</a>

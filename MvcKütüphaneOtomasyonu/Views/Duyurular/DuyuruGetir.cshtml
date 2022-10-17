@@ -1,0 +1,33 @@
+﻿@model MvcKütüphaneOtomasyonu.Models.Entity.TBLDUYURULAR
+@{
+    ViewBag.Title = "DuyuruGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>DuyuruGetir</h2>
+
+
+@using (Html.BeginForm("DuyuruGuncelle", "Duyurular", FormMethod.Post))
+{
+    <div>  </div>
+    <div class="form-group">
+        @Html.LabelFor(d => d.ID)
+        @Html.TextBoxFor(d => d.ID, new { @class = "form-control" })
+        <br />
+        <label>KATEGORİ ADI</label>
+        @Html.TextBoxFor(d => d.KATEGORİ, new { @class = "form-control" })
+
+        <br />
+        <label>İCERİK ADI</label>
+        @Html.TextBoxFor(d => d.İCERİK, new { @class = "form-control" })
+
+        <br />
+        <label>TARİH ADI</label>
+        @Html.TextBoxFor(d => d.TARİH, new { @class = "form-control" })
+
+
+    </div>
+    <div>
+        <button class="btn btn-warning">GÜNCELLE </button>
+    </div>
+}

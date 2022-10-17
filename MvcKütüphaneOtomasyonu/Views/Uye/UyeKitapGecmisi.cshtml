@@ -1,0 +1,28 @@
+﻿@using MvcKütüphaneOtomasyonu.Models.Entity
+@model List<TBLHAREKET>
+@{
+    ViewBag.Title = "UyeKitapGecmisi";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Üye Ad : @ViewBag.uyeAd</h2>
+
+<table class="table table-bordered table-hover" >
+    <tr style="background-color:#ff6a00">
+        <th>KİTAP ADI</th>
+        <th>PERSONEL ADI</th>
+        <th>ALİS TARİHİ </th>
+        <th>İADE TARİHİ </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TBLKİTAP.AD</td>
+            <td>@item.TBLPERSONEL.PERSONEL</td>
+            <td>@item.ALİSTARİHİ</td>
+            <td>@item.İADETARİHİ</td>
+        </tr>
+
+  
+    }
+</table>

@@ -1,0 +1,29 @@
+﻿@using MvcKütüphaneOtomasyonu.Models.Entity;
+@model List<TBLDUYURULAR>
+@{
+    ViewBag.Title = "Duyurular";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<h2>Duyurular</h2>
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Duyuru Kategori</th>
+        <th> Duyuru Tarih</th>
+        <th> Duyuru İçerik </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.KATEGORİ</td>
+            <td>@Convert.ToDateTime(item.TARİH).ToString("dd/MM/yyyy")</td>
+            <td>@item.İCERİK</td>
+
+           
+        </tr>
+    }
+</table>
+

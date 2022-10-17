@@ -1,0 +1,19 @@
+﻿@model MvcKütüphaneOtomasyonu.Models.Entity.TBLPERSONEL
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<h2>PersonelEkle</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label> Personel ADI</label>
+        @Html.TextBoxFor(p => p.PERSONEL, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1"> Personel EKLE  </button>
+    </div>
+</form>

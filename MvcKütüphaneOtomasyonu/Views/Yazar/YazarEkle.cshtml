@@ -1,0 +1,32 @@
+﻿@model MvcKütüphaneOtomasyonu.Models.Entity.TBLYAZAR
+@{
+    ViewBag.Title = "YazarEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>YazarEkle</h2>
+
+
+<form class="form-group" method="post">
+    <div>
+        <label> Yazar ADI</label>
+        @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(y => y.AD);
+    </div>
+
+    <div>
+        <label> Yazar SOYADI</label>
+        @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(y => y.SOYAD);
+
+    </div>
+    <div>
+        <label> Yazar DETAY</label>
+        @Html.TextBoxFor(y => y.DETAY, new { @class = "form-control" })
+    </div>
+
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1"> YAZAR EKLE  </button>
+    </div>
+</form>

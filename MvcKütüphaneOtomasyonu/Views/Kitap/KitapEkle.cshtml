@@ -1,0 +1,55 @@
+﻿
+@model MvcKütüphaneOtomasyonu.Models.Entity.TBLKİTAP
+@{
+    ViewBag.Title = "KitapEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<h2>KitapEkle</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label> Kitap ADI</label>
+        @Html.TextBoxFor(k => k.AD, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label> Kitap Kategori </label>
+        @*@Html.TextBoxFor(k => k.YAZAR, new { @class = "form-control" })*@,
+        <br />
+        @Html.DropDownListFor(k => k.TBLCATEGORY.ID, (List<SelectListItem>)ViewBag.dgr1,
+        new { @class = "form-control" })
+    </div>
+    <div>
+        <label> Kitap yazar </label>
+        @Html.DropDownListFor(k => k.TBLYAZAR.ID, (List<SelectListItem>)ViewBag.dgr2,
+        new { @class = "form-control" })
+
+    </div>
+    <div>
+        <label> Basım yili</label>
+        @Html.TextBoxFor(k => k.BASİMYİL, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label> Yayınevi</label>
+        @Html.TextBoxFor(k => k.YAYİNEVİ, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label> Sayfa Sayisi</label>
+        @Html.TextBoxFor(k => k.SAYFA, new { @class = "form-control" })
+    </div>
+
+
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1"> Kitap EKLE  </button>
+    </div>
+
+    <input type="hidden" name="Durum" value="True"/>
+</form>
+
+
+
